@@ -1,0 +1,22 @@
+package com.example.curseforbradesco.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+import java.io.Serial;
+
+@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+public class FileStoregeException extends RuntimeException{
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
+    public FileStoregeException(String ex){
+        super(ex);
+    }
+
+    public FileStoregeException(String ex,Throwable cause){
+        super(ex,cause);
+    }
+
+}
